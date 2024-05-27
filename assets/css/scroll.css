@@ -1,0 +1,71 @@
+.main_logo{
+    position: relative;
+}
+
+.logos{
+    padding: 2rem 0rem;
+    margin: 2rem 0rem;
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+    background-color:#fffcf0;
+}
+
+.logo-slide{
+  display: inline-block; 
+ white-space: nowrap;
+
+  animation: slider 30s linear  infinite  ; 
+}
+
+.logo-slide img{
+ display: inline-block;
+ width: 15rem;
+ height: auto;
+ margin: 0 1.3rem;
+ opacity: .8;
+}
+.logos::before, .logos::after{
+    content: " ";    
+    position: absolute;
+    top: 0;    
+    width: 10rem;
+    height: 100%;
+    z-index: 5;
+}
+.logos::before{
+    right: 0;
+    background-image:linear-gradient(to left, rgb(255, 255, 255),
+     rgba(255, 255, 255, 0));
+}
+.logos::after{
+    left: 0;
+    background-image:linear-gradient(to right, rgb(255, 255, 255),
+     rgba(255, 255, 255, 0));
+}
+.logos:hover .logo-slide{
+animation-play-state: paused;
+ opacity: 1;
+}
+@keyframes slider {
+    100%{
+        transform: translateX(10%); 
+            
+    }
+    
+    0%{
+        transform: translateX(-90%);
+    }
+    
+}
+.Spacing_top_bottom{
+    padding: 4rem 0;
+    margin: 5rem 0 !important;
+    
+}
+.Spacing_top_bottom h1{
+    color: #003666;
+    font-weight: 550;
+    
+}
+
